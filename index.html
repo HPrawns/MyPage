@@ -1,10 +1,222 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <h1>H大虾的简历首页------完善中!</h1>
-</body>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="Css/Initialization.css" />
+		<script type="text/javascript" src="Js/Jquery_2.2.2.js"></script>
+		<style type="text/css">
+			body {
+				background: url("./images/bg.png") repeat scroll 0 0 transparent;
+				"futura-pt",
+				"Avenir Next",
+				"AvenirNext-SemiBold",
+				"Futura-Medium",
+				Futura,
+				"Futura Std",
+				"Trebuchet MS",
+				Helvetica,
+				Arial,
+				sans-serif;
+			}
+			
+			.ol_div {
+				margin: 0px auto;
+				border: 0px solid red;
+				width: 1024px;
+				margin-top: 15px;
+			}
+			
+			#ol_div_head {
+				text-align: center;
+				height: 75px;
+				border-bottom: 1px solid #9A9A9A;
+				/*background-color: #DEECDF;*/
+			}
+			
+			#ol_div_body {
+				height: 530px;
+				border-bottom: 1px solid #9A9A9A;
+			}
+			
+			.top_div {
+				border-bottom: 3px solid rgba(0, 0, 0, 0);
+				height: 40px;
+				width: 105px;
+				display: inline-block;
+				margin-top: 15px;
+				margin-left: 35px;
+				line-height: 40px;
+				font-size: 1.5em;
+				transition: border-bottom-color .35s;
+				font-family: "futura-pt", "Avenir Next", "AvenirNext-SemiBold", "Futura-Medium", Futura, "Futura Std", "Trebuchet MS", Helvetica, Arial, sans-serif;
+			}
+			
+			.top_div:hover {
+				border-bottom-color: #2FBDAB;
+			}
+			
+			.body_div_img {
+				width: 201px;
+				margin: 0px auto;
+			}
+			
+			.body_div_img img {
+				width: 200px;
+				height: 200px;
+				border-radius: 50%
+			}
+			
+			.body_div_context,
+			.body_div_context_long {
+				margin: 0 auto;
+				border: 0px solid blue;
+				height: 65px;
+				width: 495px;
+				line-height: 65px;
+				font-size: 1.10em;
+			}
+			
+			.body_div_context_long {
+				text-align: center;
+				width: 624px;
+			}
+			
+			.body_div_context img {
+				width: 45px;
+				height: 45px;
+			}
+			
+			.body_div_context span {
+				position: relative;
+				top: -15px;
+			}
+			
+			.body_div_context_left,
+			.body_div_context_right {
+				line-height: 45px;
+				height: 45px;
+				width: 200px;
+				border-bottom: 1px solid #37B5DE;
+				float: left;
+				margin-top: 15px;
+				margin-left: 10px;
+			}
+			
+			.body_div_context_left {
+				text-align: right;
+			}
+			
+			#ol_div_foot {
+				height: 560px;
+				border-bottom: 1px solid #9A9A9A;
+			}
+			
+			.foot_div {
+				margin: 15px;
+				height: 250px;
+				/*border: 0px solid #22BC62;*/
+				float: left;
+				width: 300px;
+				align-items: flex-end;
+				display: flex;
+				box-shadow: 0 5px 10px #777;
+				transition: border .5s;
+			}
+			
+			.foot_div_context {
+				width: 300px;
+				height: 40px;
+	/*			border: 1px solid blue;*/
+				background-color: #22BC62;
+				color:rgba(0, 0, 0, 0);
+				transition:all .5s;
+				float: inherit;
+			}
+			.foot_div:hover .foot_div_context {
+				height: 40px;
+					color:white;
+			}
+			.foot_div img{
+				width: 300px;
+				height: 250px;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="" id="ol_div_head">
+			<div class="top_div">
+				About
+			</div>
+			<div class="top_div">
+				BLOG
+			</div>
+			<div class="top_div">
+				Works
+			</div>
+			<div class="top_div">
+				Git
+			</div>
+		</div>
+		<!--<hr />-->
+		<div class="ol_div" id="ol_div_body">
+			<div class="body_div_img"> <img src="./images/20160409104910_8c5rP.jpeg" /></div>
+			<div class="body_div_context">
+				<div class="body_div_context_left"><img src="./images/name.png"><span>&nbsp;姓&nbsp;名：</span></div>
+				<div class="body_div_context_right">H大虾</div>
+			</div>
+			<div class="body_div_context">
+				<div class="body_div_context_left"><img src="./images/age.png"><span>&nbsp;年&nbsp;龄：</span></div>
+				<div class="body_div_context_right">26</div>
+			</div>
+			<div class="body_div_context">
+				<div class="body_div_context_left"><img src="./images/adr.png"><span>&nbsp;地&nbsp;址：</span></div>
+				<div class="body_div_context_right">广东省深圳市</div>
+			</div>
+			<div class="body_div_context">
+				<div class="body_div_context_left"><img src="./images/mail.png"><span>Email：</span></div>
+				<div class="body_div_context_right">6469000@qq.com</div>
+			</div>
+			<div class="body_div_context_long">爱钻研，爱新奇，步伐永远向前。 爱沉默，爱活泼，少说话多行动
+			</div>
+
+		</div>
+		<!--style="background-image: url('./images/20160409104910_8c5rP.jpeg');"-->
+		<div class="ol_div" id="ol_div_foot">
+			<div class="foot_div" >
+				<div class="foot_div_context"></div>
+				<img src="./images/20160409104910_8c5rP.jpeg1" alt="" />
+			</div>
+			<div class="foot_div">
+				<div class="foot_div_context">啦啦啦 这事介绍</div>
+				<img src="" alt="" />
+			</div>
+			<div class="foot_div">
+				<div class="foot_div_context">啦啦啦 这事介绍</div>
+				<img src="" alt="" />
+			</div>
+			<div class="foot_div">
+				<div class="foot_div_context">啦啦啦 这事介绍</div>
+				<img src="" alt="" />
+			</div>
+			<div class="foot_div">
+				<div class="foot_div_context">啦啦啦 这事介绍</div>
+				<img src="" alt="" />
+			</div>
+			<div class="foot_div">
+				<div class="foot_div_context">啦啦啦 这事介绍</div>
+				<img src="" alt="" />
+			</div>
+		</div>
+		
+		<!--<div style="border: 1px solid red;height: 300px ;width: 310px;">
+			<div style="border: 1px solid blue; width: 300px;height: 15px;float: left;"></div>
+			<img src="./images/sss.png" style="height: 200px ;width: 300px;">
+			
+		</div>-->
+	</body>
+
 </html>
