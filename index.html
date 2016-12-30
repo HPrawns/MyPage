@@ -5,7 +5,9 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title></title>
 		<link rel="stylesheet" href="Css/Initialization.css" />
+		<link rel="stylesheet" type="text/css" href="Css/MainMenu.css" />
 		<script type="text/javascript" src="Js/Jquery_2.2.2.js"></script>
+		<script type="text/javascript" src="Js/Vue.js" ></script>
 		<style type="text/css">
 			body {
 				background: url("./images/bg.png") repeat scroll 0 0 transparent;
@@ -28,33 +30,9 @@
 				margin-top: 15px;
 			}
 			
-			#ol_div_head {
-				text-align: center;
-				height: 75px;
-				border-bottom: 1px solid #9A9A9A;
-				/*background-color: #DEECDF;*/
-			}
-			
 			#ol_div_body {
 				height: 530px;
 				border-bottom: 1px solid #9A9A9A;
-			}
-			
-			.top_div {
-				border-bottom: 3px solid rgba(0, 0, 0, 0);
-				height: 40px;
-				width: 105px;
-				display: inline-block;
-				margin-top: 15px;
-				margin-left: 35px;
-				line-height: 40px;
-				font-size: 1.5em;
-				transition: border-bottom-color .35s;
-				font-family: "futura-pt", "Avenir Next", "AvenirNext-SemiBold", "Futura-Medium", Futura, "Futura Std", "Trebuchet MS", Helvetica, Arial, sans-serif;
-			}
-			
-			.top_div:hover {
-				border-bottom-color: #2FBDAB;
 			}
 			
 			.body_div_img {
@@ -128,33 +106,22 @@
 			.foot_div_context {
 				width: 300px;
 				height: 0px;
-	/*			border: 1px solid blue;*/
+				/*			border: 1px solid blue;*/
 				background-color: #22BC62;
-				color:rgba(0, 0, 0, 0);
-				transition:all .5s;
-	
+				color: rgba(0, 0, 0, 0);
+				transition: all .5s;
 			}
+			
 			.foot_div:hover .foot_div_context {
 				height: 40px;
-					color:white;
+				color: white;
 			}
 		</style>
 	</head>
 
 	<body>
-		<div class="" id="ol_div_head">
-			<div class="top_div">
-				About
-			</div>
-			<div class="top_div">
-				BLOG
-			</div>
-			<div class="top_div">
-				Works
-			</div>
-			<div class="top_div">
-				Git
-			</div>
+		<div id="mainmenu">
+			<main-menu></main-menu>
 		</div>
 		<!--<hr />-->
 		<div class="ol_div" id="ol_div_body">
@@ -180,10 +147,10 @@
 
 		</div>
 		<div class="ol_div" id="ol_div_foot">
-			<div class="foot_div" >
+			<div class="foot_div">
 				<!--<img src="./images/20160409104910_8c5rP.jpeg1" alt="" />-->
 				<div class="foot_div_context">测试测试测试</div>
-				
+
 			</div>
 			<div class="foot_div">
 				<div class="foot_div_context">啦啦啦 这事介绍</div>
@@ -202,5 +169,5 @@
 			</div>
 		</div>
 	</body>
-
+<script type="text/javascript" src="Js/PaeInit.js" ></script>
 </html>

@@ -1,0 +1,26 @@
+#mainmenu{
+	position:relative;
+	height: 75px;
+	width: 100%;
+}
+#ol_div_head {
+				text-align: center;
+				height: 75px;
+				border-bottom: 1px solid #9A9A9A;
+			}
+			.top_div {
+				border-bottom: 3px solid rgba(0, 0, 0, 0);
+				height: 40px;
+				width: 105px;
+				display: inline-block;
+				margin-top: 15px;
+				margin-left: 35px;
+				line-height: 40px;
+				font-size: 1.5em;
+				transition: border-bottom-color .35s;
+				font-family: "futura-pt", "Avenir Next", "AvenirNext-SemiBold", "Futura-Medium", Futura, "Futura Std", "Trebuchet MS", Helvetica, Arial, sans-serif;
+			}
+			
+			.top_div:hover {
+				border-bottom-color: #2FBDAB;
+			}
