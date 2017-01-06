@@ -6,6 +6,7 @@
 		<title></title>
 		<link rel="stylesheet" href="Css/Initialization.css" />
 		<link rel="stylesheet" type="text/css" href="Css/MainMenu.css" />
+		<link rel="stylesheet" type="text/css" href="Css/PublicStyle.css" />
 		<script type="text/javascript" src="Js/Jquery_2.2.2.js"></script>
 		<script type="text/javascript" src="Js/Vue.js" ></script>
 		<style type="text/css">
@@ -23,75 +24,69 @@
 				sans-serif;
 			}
 			
-			.ol_div {
+			.ol-div {
 				margin: 0px auto;
 				border: 0px solid red;
 				width: 1024px;
 				margin-top: 15px;
 			}
 			
-			#ol_div_body {
+			#ol-div-body {
 				height: 530px;
 				border-bottom: 1px solid #9A9A9A;
 			}
 			
-			.body_div_img {
+			.body-div-img {
 				width: 201px;
 				margin: 0px auto;
 			}
 			
-			.body_div_img img {
+			.body-div-img img {
 				width: 200px;
 				height: 200px;
 				border-radius: 50%
 			}
 			
-			.body_div_context,
-			.body_div_context_long {
+			.body-div-content,
+			.body-div-content-long {
 				margin: 0 auto;
 				border: 0px solid blue;
 				height: 65px;
 				width: 495px;
 				line-height: 65px;
 				font-size: 1.10em;
+				
 			}
 			
-			.body_div_context_long {
+			.body-div-content-long {
 				text-align: center;
 				width: 624px;
 			}
 			
-			.body_div_context img {
+			.body-div-content img {
 				width: 45px;
 				height: 45px;
 			}
 			
-			.body_div_context span {
+			.body-div-content span {
 				position: relative;
 				top: -15px;
 			}
 			
-			.body_div_context_left,
-			.body_div_context_right {
-				line-height: 45px;
-				height: 45px;
+			.content-div-left{
 				width: 200px;
-				border-bottom: 1px solid #37B5DE;
-				float: left;
-				margin-top: 15px;
-				margin-left: 10px;
 			}
 			
-			.body_div_context_left {
+			.content-div-left {
 				text-align: right;
 			}
 			
-			#ol_div_foot {
+			#ol-div-foot {
 				height: 560px;
 				border-bottom: 1px solid #9A9A9A;
 			}
 			
-			.foot_div {
+			.foot-div {
 				margin: 15px;
 				height: 250px;
 				/*border: 0px solid #22BC62;*/
@@ -103,7 +98,7 @@
 				transition: border .5s;
 			}
 			
-			.foot_div_context {
+			.foot-div-content {
 				width: 300px;
 				height: 0px;
 				/*			border: 1px solid blue;*/
@@ -112,7 +107,7 @@
 				transition: all .5s;
 			}
 			
-			.foot_div:hover .foot_div_context {
+			.foot-div:hover .foot-div-content {
 				height: 40px;
 				color: white;
 			}
@@ -124,50 +119,50 @@
 			<main-menu></main-menu>
 		</div>
 		<!--<hr />-->
-		<div class="ol_div" id="ol_div_body">
-			<div class="body_div_img"> <img src="./images/20160409104910_8c5rP.jpeg" /></div>
-			<div class="body_div_context">
-				<div class="body_div_context_left"><img src="./images/name.png"><span>&nbsp;姓&nbsp;名：</span></div>
-				<div class="body_div_context_right">H大虾</div>
+		<div class="ol-div" id="ol-div-body">
+			<div class="body-div-img"> <img src="./images/20160409104910_8c5rP.jpeg" /></div>
+			<div class="body-div-content">
+				<div class="content-div-left"><img src="./images/name.png"><span>&nbsp;姓&nbsp;名：</span></div>
+				<div class="content-div-right">H大虾</div>
 			</div>
-			<div class="body_div_context">
-				<div class="body_div_context_left"><img src="./images/age.png"><span>&nbsp;年&nbsp;龄：</span></div>
-				<div class="body_div_context_right">测试测试测试</div>
+			<div class="body-div-content">
+				<div class="content-div-left"><img src="./images/age.png"><span>&nbsp;年&nbsp;龄：</span></div>
+				<div class="content-div-right">测试测试测试</div>
 			</div>
-			<div class="body_div_context">
-				<div class="body_div_context_left"><img src="./images/adr.png"><span>&nbsp;地&nbsp;址：</span></div>
-				<div class="body_div_context_right">测试测试测试</div>
+			<div class="body-div-content">
+				<div class="content-div-left"><img src="./images/adr.png"><span>&nbsp;地&nbsp;址：</span></div>
+				<div class="content-div-right">测试测试测试</div>
 			</div>
-			<div class="body_div_context">
-				<div class="body_div_context_left"><img src="./images/mail.png"><span>Email：</span></div>
-				<div class="body_div_context_right">测试测试测试</div>
+			<div class="body-div-content">
+				<div class="content-div-left"><img src="./images/mail.png"><span>Email：</span></div>
+				<div class="content-div-right">测试测试测试</div>
 			</div>
-			<div class="body_div_context_long">测试测试测试,测试测试测试,测试测试测试,测试测试测试
+			<div class="body-div-content-long">测试测试测试,测试测试测试,测试测试测试,测试测试测试
 			</div>
 
 		</div>
-		<div class="ol_div" id="ol_div_foot">
-			<div class="foot_div">
-				<!--<img src="./images/20160409104910_8c5rP.jpeg1" alt="" />-->
-				<div class="foot_div_context">测试测试测试</div>
+		<div class="ol-div" id="ol-div-foot">
+			<div class="foot-div">
+				<!--<img src="./images/20160409104910-8c5rP.jpeg1" alt="" />-->
+				<div class="foot-div-content">测试测试测试</div>
 
 			</div>
-			<div class="foot_div">
-				<div class="foot_div_context">啦啦啦 这事介绍</div>
+			<div class="foot-div">
+				<div class="foot-div-content">啦啦啦 这事介绍</div>
 			</div>
-			<div class="foot_div">
-				<div class="foot_div_context">啦啦啦 这事介绍</div>
+			<div class="foot-div">
+				<div class="foot-div-content">啦啦啦 这事介绍</div>
 			</div>
-			<div class="foot_div">
-				<div class="foot_div_context">啦啦啦 这事介绍</div>
+			<div class="foot-div">
+				<div class="foot-div-content">啦啦啦 这事介绍</div>
 			</div>
-			<div class="foot_div">
-				<div class="foot_div_context">啦啦啦 这事介绍</div>
+			<div class="foot-div">
+				<div class="foot-div-content">啦啦啦 这事介绍</div>
 			</div>
-			<div class="foot_div">
-				<div class="foot_div_context">啦啦啦 这事介绍</div>
+			<div class="foot-div">
+				<div class="foot-div-content">啦啦啦 这事介绍</div>
 			</div>
 		</div>
 	</body>
-<script type="text/javascript" src="Js/PaeInit.js" ></script>
+<script type="text/javascript" src="Js/PageInit.js" ></script>
 </html>

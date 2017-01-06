@@ -1,5 +1,5 @@
 (function(x) {
-	var ele = document.getElementById("div_load");
+	var ele = document.getElementById("div-load");
 	window.onscroll = function() {
 		var scrollTop = 0,
 			bodyScrollTop = 0,

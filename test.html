@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="Js/Jquery_2.2.2.js"></script>
+		<script>
+			function go() {
+				var liarr = $(".am_li");
+				var evc = 256 / 16;
+				$.each(liarr, function(index, item) {
+					var g = parseInt(255 - (index * evc));
+					var r = parseInt(index * evc);
+					$(item).css("background-color", "rgb(" + r + ","+g+",60)");
+
+
+//
+//				var r = parseInt((index) * evc);
+//				var g = parseInt(255 - (index * evc));
+//						$(item).css("background-color", "rgb(255,"+g+","+g+")");
+
+			});
+			}
+		</script>
+		<style>
+			li {
+				border: 0px solid red;
+				width: 25px;
+				height: 25px;
+				float: left;
+				margin-left: 1.5px;
+				list-style-type:none;
+			}
+			
+			.am_li {}
+		</style>
+	</head>
+
+	<body>
+		<ul>
+			<li class="am_li"></li>
+			<li class="am_li"></li>
+			<li class="am_li"></li>
+			<li class="am_li"></li>
+			<li class="am_li"></li>
+			<li class="am_li"></li>
+			<li class="am_li"></li>
+			<li class="am_li"></li>
+			<li class="am_li"></li>
+			<li class="am_li"></li>
+			<li class="am_li"></li>
+			<li class="am_li"></li>
+			<li class="am_li"></li>
+			<li class="am_li"></li>
+			<li class="am_li"></li>
+			<li class="am_li"></li>
+
+		</ul>
+		<input type="button" value="开始" onclick="go()" />
+	</body>
+
+</html>

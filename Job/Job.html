@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>简历</title>
+		<link rel="stylesheet" type="text/css" href="../Css/Initialization.css" />
+		<link rel="stylesheet" href="../Css/MainMenu.css" />
+		<link rel="stylesheet" href="../Css/PublicStyle.css" />
+		<script type="text/javascript" src="../Js/Jquery_2.2.2.js"></script>
+		<script type="text/javascript" src="../Js/Vue.js"></script>
+		<style>
+			.out-div {
+				border: 1px solid red;
+				height: auto;
+				margin: 0 auto;
+				width: 1024px;
+			}
+			
+			.left-menu {
+				position: fixed;
+				height: 300px;
+				width: 120px;
+				border: 1px solid blue;
+				left: 20px;
+			}
+			
+			.top-menu {
+				width: 45px;
+				height: 45px;
+				border: 1px solid #ED4E6E;
+				position: fixed;
+				left: 90%;
+				top: 90%;
+			}
+			/*主要区域的每个大div*/
+			
+			.in-item {
+				width: 1024px;
+				border: 1px solid saddlebrown;
+			}
+			
+			.in-item-title {
+				line-height: 35px;
+				height: 35px;
+				border-bottom: 1px solid #9A9A9A;
+				font-size: 1.25em;
+				text-indent: 1em;
+			}
+			
+			.in-item-work-content {
+				height: auto;
+				width: 860px;
+				margin: 15px 82px;
+				border: 1px solid #ED4E6E;
+				float: left;
+			}
+			/*个人简介*/
+			
+			#item-pc {
+				height: 275px;
+				padding-top: 45px;
+			}
+			
+			#in-item-pc-img {
+				border: 1px solid #22BC62;
+				height: 255px;
+				width: 255px;
+				float: left;
+				margin-left: 245px;
+			}
+			
+			#in-item-pc-content {
+				height: 255px;
+				width: 275px;
+				border: 1px solid #22BC62;
+				float: left;
+				margin-left: 15px;
+			}
+			/*工作简介*/
+			
+			#item-work {
+				height: 450px;
+			}
+			/*项目简介*/
+			
+			#item-project {
+				height: auto;
+			}
+			
+			.in-item-project-content {
+				height: 350px;
+				border: 1px solid red;
+				margin: 10px 10px;
+			}
+			
+			.in-item-project-content .content-div-left {
+				clear: left;
+			}
+			
+			.in-item-project-content .in-item-project-content-introduce {
+				border: 1px solid #0000FF;
+				float: left;
+				height: 45px;
+				margin-top: 25px;
+				margin-left: 10px;
+				width: 920px;
+				white-space: pre-wrap;
+				/* css-3 */
+				white-space: -moz-pre-wrap;
+				/* Mozilla, since 1999 */
+				white-space: -pre-wrap;
+				/* Opera 4-6 */
+				white-space: -o-pre-wrap;
+				/* Opera 7 */
+				word-wrap: break-word;
+				/* Internet Explorer 5.5+ */
+				line-height: 1.25em;
+			}
+			
+			.in-item-project-toggle {
+				width: 25px;
+				height: 25px;
+				border: 1px solid red;
+				position: relative;
+				float: right;
+			}
+			/*技能简介*/
+			
+			#item-skill {
+				height: 450px;
+			}
+			
+			.item-skill-content,
+			.item-skill-head {
+				margin: 0px 10px;
+				width: 1004px;
+			}
+			
+			.item-skill-head {
+				border: 1px solid red;
+				height: 35px;
+			}
+			
+			.item-skill-content {
+				/*border: 1px solid red;*/
+				height: 45px;
+			}
+			
+			.in-item-skill-duration,
+			.in-item-skill-name,
+			.in-item-skill-progress,
+			.in-item-skill-body {
+				float: left;
+				width: 80px;
+				height: 35px;
+				line-height: 35px;
+				margin-left: 30px;
+			}
+			
+			.in-item-skill-duration,
+			.in-item-skill-name {
+				border-right: 1px solid blueviolet;
+			}
+			
+			.in-item-skill-progress,
+			.in-item-skill-body-block {
+				width: 746px;
+			}
+			
+			.block-li {
+				height: 25px;
+				width: 40px;
+				float: left;
+				margin-top: 5px;
+				margin-left: 1px;
+				/*opacity: 1;*/
+				border: 1px solid red;
+			}
+			/*其他简介*/
+			
+			#item-other {
+				height: 450px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="mainmenu">
+			<main-menu></main-menu>
+		</div>
+		<div class="left-menu"></div>
+		<div class="out-div">
+			<div class="in-item" id="item-pc">
+				<div id="in-item-pc-img"></div>
+				<div id="in-item-pc-content">
+					<div class="content-div-left">姓名：</div>
+					<div class="content-div-right">占位符</div>
+					<div class="content-div-left">年龄：</div>
+					<div class="content-div-right">占位符</div>
+					<div class="content-div-left">性别：</div>
+					<div class="content-div-right">占位符</div>
+					<div class="content-div-left">地址：</div>
+					<div class="content-div-right">占位符</div>
+				</div>
+
+			</div>
+			<div class="in-item" id="item-work">
+				<div class="in-item-title">工作概况</div>
+				<div class="in-item-work-content">
+					<div class="content-div-left">姓名：</div>
+					<div class="content-div-right">占位符</div>
+					<div class="content-div-left">年龄：</div>
+					<div class="content-div-right">占位符</div>
+					<div class="content-div-left">性别：</div>
+					<div class="content-div-right">占位符</div>
+					<div class="content-div-left">地址：</div>
+					<div class="content-div-right">占位符</div>
+					<div class="content-div-left">性别：</div>
+					<div class="content-div-right">占位符</div>
+					<div class="content-div-left">地址：</div>
+					<div class="content-div-right">占位符</div>
+
+				</div>
+			</div>
+			<div class="in-item" id="item-project">
+				<div class="in-item-title">项目介绍</div>
+				<div id="vue-component-project">
+					<vue-component-project v-for="(item,index) in items" v-bind:options="item"></vue-component-project>
+				</div>
+
+			</div>
+			<div class="in-item" id="item-skill">
+				<div class="in-item-title">技能说明</div>
+				<div class="item-skill-head">
+					<div class="in-item-skill-name">技能类型</div>
+					<div class="in-item-skill-duration">使用时长</div>
+					<div class="in-item-skill-progress">熟练程度 1~5 了解 6~10 熟练 11-16 精通</div>
+				</div>
+				<div class="item-skill-content">
+					<div class="in-item-skill-body">C#</div>
+					<div class="in-item-skill-body">2年10个月</div>
+					<div class="in-item-skill-body in-item-skill-body-block" id="vue-component-preblock" data-type="c#">
+						<ul>
+							<li class="block-li" is="vue-component-preblock" v-for="(item,index) in arrs" v-bind:data-pre="index" data-type="c#"></li>
+
+							<!--<li class="block-li" is="vue-component-preblock" data-pre="index"  data-type="c#"></li>-->
+							<!--<li class="block-li" data-pre='1'></li>
+							<li class="block-li" data-pre='1'></li>
+							<li class="block-li" data-pre='1'></li>
+							<li class="block-li" data-pre='1'></li>
+							<li class="block-li" data-pre='1'></li>
+							<li class="block-li" data-pre='1'></li>
+							<li class="block-li" data-pre='1'></li>
+							<li class="block-li" data-pre='1'></li>
+							<li class="block-li" data-pre='1'></li>
+							<li class="block-li" data-pre='1'></li>
+							<li class="block-li" data-pre='1'></li>
+							<li class="block-li" data-pre='1'></li>
+							<li class="block-li" data-pre='1'></li>
+							<li class="block-li" data-pre='1'></li>
+							<li class="block-li" data-pre='1'></li>
+							<li class="block-li" data-pre='1'></li>-->
+						</ul>
+						<input type="button" value="加载" class="block-button" v-on:click="initblock($event,16,'c#')" />
+					</div>
+					<div class="hr"></div>
+					<div class="in-item-skill-body">.Net</div>
+					<div class="in-item-skill-body">2年10个月</div>
+					<div class="in-item-skill-body in-item-skill-body-block">
+						<!--<ul>
+							<li class="block-li"></li>
+							<li class="block-li"></li>
+							<li class="block-li"></li>
+							<li class="block-li"></li>
+							<li class="block-li"></li>
+							<li class="block-li"></li>
+							<li class="block-li"></li>
+							<li class="block-li"></li>
+							<li class="block-li"></li>
+							<li class="block-li"></li>
+							<li class="block-li"></li>
+						</ul>-->
+					</div>
+					<div class="hr"></div>
+				</div>
+			</div>
+			<div class="in-item" id="item-other">
+				<div class="in-item-title">其他内容</div>
+
+			</div>
+
+		</div>
+
+		<div class="top-menu"></div>
+		<script type="text/javascript" src="../Js/PageInit.js"></script>
+		<script type="text/javascript" src="../Js/JobDataInit.js"></script>
+	</body>
+
+</html>

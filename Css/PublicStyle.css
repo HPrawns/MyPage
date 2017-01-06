@@ -1,0 +1,22 @@
+/*整个项目通用的样式表*/
+
+
+/*用于文本显示的div,类似input*/
+
+.content-div-left,
+.content-div-right {
+	line-height: 45px;
+	height: 45px;
+	float: left;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+.content-div-left{
+		width: auto;
+		text-align: right;
+		
+}
+.content-div-right{
+		width: 200px;border-bottom: 1px solid #37B5DE;
+}
+

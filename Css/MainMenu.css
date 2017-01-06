@@ -1,14 +1,14 @@
 #mainmenu{
 	position:relative;
-	height: 75px;
+	height: 80px;
 	width: 100%;
 }
-#ol_div_head {
+#ol-div-head {
 				text-align: center;
 				height: 75px;
 				border-bottom: 1px solid #9A9A9A;
 			}
-			.top_div {
+			.top-div {
 				border-bottom: 3px solid rgba(0, 0, 0, 0);
 				height: 40px;
 				width: 105px;
@@ -21,6 +21,6 @@
 				font-family: "futura-pt", "Avenir Next", "AvenirNext-SemiBold", "Futura-Medium", Futura, "Futura Std", "Trebuchet MS", Helvetica, Arial, sans-serif;
 			}
 			
-			.top_div:hover {
+			.top-div:hover {
 				border-bottom-color: #2FBDAB;
 			}
