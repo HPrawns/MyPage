@@ -6,18 +6,139 @@
 		<title>日志</title>
 		<link rel="stylesheet" type="text/css" href="../Css/Initialization.css" />
 		<link rel="stylesheet" href="../Css/MainMenu.css" />
+		<script type="text/javascript" src="../Js/Jquery_2.2.2.js"></script>
 		<script type="text/javascript" src="../Js/Vue.js"></script>
-	
-		<script>
-	
-		</script>
+		<style>
+			.out-div {
+				border: 1px solid red;
+				width: 855px;
+				height: 1000px;
+				margin: 0 auto;
+				position: static;
+			}
+			/*标签搜索区域*/
+			
+			.tag-search {
+				border: 1px solid #8A2BE2;
+				width: 250px;
+				height: 260px;
+				/*position:relative;
+				left: 82%;*/
+				float: right;
+				margin-right: 15px;
+			}
+			
+			.blog-item {
+				width: 840px;
+				height: 185px;
+				border: 1px solid yellow;
+				margin: 5px 5px;
+			}
+			
+			.blog-item-t,
+			.blog-item-tag,
+			.blog-item-title {
+				height: 45px;
+				border: 1px solid salmon;
+				line-height: 45px;
+			}
+			
+			.blog-item-title {
+				font-size: 24px;
+				width: auto;
+				float: left;
+				margin-left: 5px;
+			}
+			
+			.blog-item-tag {
+				width: auto;
+				float: right;
+				color: #9A9A9A;
+				font-size: 0.75em;
+			}
+			
+			.blog-item-content {
+				border: 1px solid blue;
+				height: 84px;
+				text-indent: 2em;
+				line-height: 1.5em;
+				/*letter-spacing:3px;*/
+			}
+			
+			.blog-item-foot {
+				height: 25px;
+				width: 100%;
+				font-size: 0.95em;
+				border: 1px solid red;
+				line-height: 25px;
+			}
+			
+			.blog-item-page {
+				/*border: 1px solid red;*/
+				height: 25px;
+				line-height: 25px;
+				position: absolute;
+				top: 1046px;
+				width: 842px;
+				margin: 2px 5px;
+				font-size: 14px;
+			}
+			
+			.blog-item-page ul{
+				margin: 0px 160px;
+				width: 530px;
+			}
+			.blog-item-page ul li {
+				float: left;
+				border: 1px solid #9A9A9A;
+				margin-left: 3px;
+				border-radius: 2px;
+			}
+			
+			.blog-item-page ul li a {
+				padding: 0px 12px;
+				display: inline-block;
+				transition: all .35s;
+			}
+			
+			.blog-item-page-a:hover {
+				background-color: #37B5DE;
+				color: #FFFFFF;
+			}
+			
+			.blog-item-page-index {
+				background-color: #37B5DE;
+				color: #FFFFFF;
+			}
+		</style>
 	</head>
 
 	<body>
 		<div id="mainmenu">
 			<main-menu></main-menu>
 		</div>
-<div style="height: 1000px;"></div>
+		<div class="tag-search">
+
+		</div>
+
+		<div class="out-div" id="vue-component-bloglist">
+			<blog-item v-for='(item,index) in datalist' v-bind:blogs="item">
+
+			</blog-item>
+
+			<!--DataListPage为父实例的方法 用于重新绑定数据-->
+			<blog-page v-bind:bloglist='datalist' v-on:gopage='DataListPage'>
+
+			</blog-page>
+		</div>
+
 	</body>
 	<script type="text/javascript" src="../Js/PageInit.js"></script>
+	<script type="text/javascript" src="../Js/BlogListInit.js"></script>
+	<script>
+		PageInit.MainMenu();
+		BlogList.InitData();
+		//		BlogList.CreatePage();
+	</script>
+
 </html>

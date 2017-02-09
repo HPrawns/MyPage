@@ -3,12 +3,14 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>简历</title>
+		<title>占位符</title>
 		<link rel="stylesheet" type="text/css" href="../Css/Initialization.css" />
 		<link rel="stylesheet" href="../Css/MainMenu.css" />
 		<link rel="stylesheet" href="../Css/PublicStyle.css" />
+		<!--<link rel="stylesheet" href="../Css/Load.css" />-->
 		<script type="text/javascript" src="../Js/Jquery_2.2.2.js"></script>
 		<script type="text/javascript" src="../Js/Vue.js"></script>
+
 		<style>
 			.out-div {
 				border: 1px solid red;
@@ -25,14 +27,6 @@
 				left: 20px;
 			}
 			
-			.top-menu {
-				width: 45px;
-				height: 45px;
-				border: 1px solid #ED4E6E;
-				position: fixed;
-				left: 90%;
-				top: 90%;
-			}
 			/*主要区域的每个大div*/
 			
 			.in-item {
@@ -135,6 +129,7 @@
 			.item-skill-head {
 				margin: 0px 10px;
 				width: 1004px;
+				height: auto;
 			}
 			
 			.item-skill-head {
@@ -144,7 +139,10 @@
 			
 			.item-skill-content {
 				/*border: 1px solid red;*/
-				height: 45px;
+			}
+			
+			.item-skill-content-block {
+				height: 30px;
 			}
 			
 			.in-item-skill-duration,
@@ -168,14 +166,28 @@
 				width: 746px;
 			}
 			
-			.block-li {
+			.block-ul li {
 				height: 25px;
-				width: 40px;
+				width: 45px;
 				float: left;
 				margin-top: 5px;
-				margin-left: 1px;
-				/*opacity: 1;*/
-				border: 1px solid red;
+				margin-left: 0.95px;
+				opacity: 0;
+				/*border: 1px solid red;*/
+			}
+			
+			.block-button {
+				height: 25px;
+				line-height: 25px;
+				width: 70px;
+				background-color: #2FBDAB;
+				color: #FFFFFF;
+				border: 0 solid red;
+				transition: background-color .5s;
+			}
+			
+			.block-button:hover {
+				background-color: #D84C29;
 			}
 			/*其他简介*/
 			
@@ -237,52 +249,28 @@
 					<div class="in-item-skill-duration">使用时长</div>
 					<div class="in-item-skill-progress">熟练程度 1~5 了解 6~10 熟练 11-16 精通</div>
 				</div>
-				<div class="item-skill-content">
-					<div class="in-item-skill-body">C#</div>
-					<div class="in-item-skill-body">2年10个月</div>
-					<div class="in-item-skill-body in-item-skill-body-block" id="vue-component-preblock" data-type="c#">
-						<ul>
-							<li class="block-li" is="vue-component-preblock" v-for="(item,index) in arrs" v-bind:data-pre="index" data-type="c#"></li>
-
-							<!--<li class="block-li" is="vue-component-preblock" data-pre="index"  data-type="c#"></li>-->
-							<!--<li class="block-li" data-pre='1'></li>
-							<li class="block-li" data-pre='1'></li>
-							<li class="block-li" data-pre='1'></li>
-							<li class="block-li" data-pre='1'></li>
-							<li class="block-li" data-pre='1'></li>
-							<li class="block-li" data-pre='1'></li>
-							<li class="block-li" data-pre='1'></li>
-							<li class="block-li" data-pre='1'></li>
-							<li class="block-li" data-pre='1'></li>
-							<li class="block-li" data-pre='1'></li>
-							<li class="block-li" data-pre='1'></li>
-							<li class="block-li" data-pre='1'></li>
-							<li class="block-li" data-pre='1'></li>
-							<li class="block-li" data-pre='1'></li>
-							<li class="block-li" data-pre='1'></li>
-							<li class="block-li" data-pre='1'></li>-->
-						</ul>
-						<input type="button" value="加载" class="block-button" v-on:click="initblock($event,16,'c#')" />
+				<div class="item-skill-content" id="vue-component-preblock">
+					<div class="item-skill-content-block">
+						<div class="in-item-skill-body">C#</div>
+						<div class="in-item-skill-body">2年10个月</div>
+						<div class="in-item-skill-body in-item-skill-body-block">
+							<ul class="block-ul">
+								<li class="" is="vue-component-preblock" v-for="(item,index) in lgarr['c#']" data-type="c#"></li>
+							</ul>
+							<input type="button" value="加载" class="block-button" v-on:click="initblock($event,16,'c#')" />
+						</div>
 					</div>
-					<div class="hr"></div>
-					<div class="in-item-skill-body">.Net</div>
-					<div class="in-item-skill-body">2年10个月</div>
-					<div class="in-item-skill-body in-item-skill-body-block">
-						<!--<ul>
-							<li class="block-li"></li>
-							<li class="block-li"></li>
-							<li class="block-li"></li>
-							<li class="block-li"></li>
-							<li class="block-li"></li>
-							<li class="block-li"></li>
-							<li class="block-li"></li>
-							<li class="block-li"></li>
-							<li class="block-li"></li>
-							<li class="block-li"></li>
-							<li class="block-li"></li>
-						</ul>-->
+					<hr />
+					<div class="item-skill-content-block">
+						<div class="in-item-skill-body">.Net</div>
+						<div class="in-item-skill-body">2年10个月</div>
+						<div class="in-item-skill-body in-item-skill-body-block">
+							<ul class="block-ul">
+								<li class="" is="vue-component-preblock" v-for="(item,index) in lgarr['net']" data-type="net"></li>
+							</ul>
+						</div>
 					</div>
-					<div class="hr"></div>
+					<hr />
 				</div>
 			</div>
 			<div class="in-item" id="item-other">
@@ -292,9 +280,22 @@
 
 		</div>
 
-		<div class="top-menu"></div>
+		<div class="top-menu">
+			<span class="top-menu-btn">
+				<span class="top-menu-ico"></span>
+			<span class="top-menu-text">返回<br>顶部</span>
+
+			</span>
+
+		</div>
+		<!--<div class="load" id="div-load"></div>-->
 		<script type="text/javascript" src="../Js/PageInit.js"></script>
 		<script type="text/javascript" src="../Js/JobDataInit.js"></script>
+		<!--<script type="text/javascript" src="../Js/Load.js" ></script>-->
+		<script>
+			PageInit.MainMenu();
+			PageInit.BackTop();
+		</script>
 	</body>
 
 </html>

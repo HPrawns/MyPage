@@ -11,12 +11,63 @@
 	margin-top: 15px;
 	margin-left: 10px;
 }
-.content-div-left{
-		width: auto;
-		text-align: right;
-		
-}
-.content-div-right{
-		width: 200px;border-bottom: 1px solid #37B5DE;
+
+.content-div-left {
+	width: auto;
+	text-align: right;
 }
 
+.content-div-right {
+	width: 200px;
+	border-bottom: 1px solid #37B5DE;
+}
+
+
+/*返回顶部*/
+
+.top-menu {
+	width: 52px;
+	height: 52px;
+	/*border: 0px solid #ED4E6E;*/
+	position: fixed;
+	left: 90%;
+	top: 90%;
+	display: block;
+}
+
+.top-menu-btn,
+.top-menu-ico,
+.top-menu-text {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 52px;
+	height: 52px;
+	overflow: hidden;
+	background-color: #009AD9;
+	text-align: center;
+	color: #fff;
+}
+
+.top-menu-ico {
+	top: 0;
+	background: url(../images/toTop.png) no-repeat;
+	background-position: 10px;
+	transition: top .5s;
+}
+
+.top-menu-text {
+	top: 52px;
+	font-size: 12px;
+	line-height: 1.2;
+	padding-top: 12px;
+	transition: top .5s;
+}
+
+.top-menu-btn:hover .top-menu-ico {
+	top: -52px;
+}
+
+.top-menu-btn:hover .top-menu-text {
+	top: 0;
+}

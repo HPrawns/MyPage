@@ -21,7 +21,7 @@ Vue.component('vue-component-project', {
 	}
 });
 Vue.component("vue-component-preblock", {
-	template: '<li class="block-li"  ></li>',
+	template: '<li></li>',
 	props: {}
 });
 
@@ -42,43 +42,41 @@ function ReadJsonData() {
 		}
 	});
 }
-
+/*点击加载按钮*/
 function ProgressBlockInit() {
-
 	new Vue({
 		el: '#vue-component-preblock',
 		data: {
-			arrs: [],
+			lgarr: {
+				"c#": [],
+				"net": []
+			}
 		},
 		methods: {
 			initblock: function(event, e, lg) {
-
-				this.arrs = [];
+			//	this.lg_event=event;
+				this.lgtype = lg;
 				for(var i = 0; i < e; i++) {
-					this.arrs[i] = i;
+					this.lgarr[lg] = i;
 				}
-				
-				
-				var _btnevent = event.target;
-
-				var _lilist = $(_btnevent).prev()[0];
-				
-				console.log($("li[data-type='c#']"));
-				
-				
-//				$("[data-type='" + lg + "']").each(function(index,item){
-//					console.log($(item));
-//				})
-
+				var btn_event=$(event.toElement).length==0?$(event.originalTarget):$(event.toElement);
+				$(btn_event).hide();
 			}
+		},
+		updated: function() {
+			console.log("更新时");
+			var _liarr = $("li[data-type='" + this.lgtype + "']");
+			$.each(_liarr, function(index, item) {
+				var g = parseInt(255 - (index * _evc));
+				var r = parseInt(index * _evc);
+				$(item).css("background-color", "rgb(" + r + "," + g + ",60)");
+				$(item).delay((index+1)*200).animate({opacity:1},700);
+				
+			});
+			
+		},
+		mounted: function() {
+			console.log("M时");
 		}
-	});
-
-	var _arr = $(".block-li");
-	var _evc = 256 / 16;
-	$.each(_arr, function(index, item) {
-		var g = parseInt(255 - (index * _evc));
-		var r = parseInt(index * _evc);
-		$(item).css("background-color", "rgb(" + r + "," + g + ",60)");
 	});
 }

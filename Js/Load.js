@@ -1,5 +1,6 @@
 (function(x) {
 	var ele = document.getElementById("div-load");
+	if(!ele){return;}
 	window.onscroll = function() {
 		var scrollTop = 0,
 			bodyScrollTop = 0,
@@ -29,13 +30,14 @@
 		} else {
 			windowHeight = document.body.clientHeight;
 		}
+		/*当前页面区域+滚动条以外区域=整个文档*/
 		if(scrollTop + windowHeight == scrollHeight) {
 			ele.classList.add("loading");
 		}
 	}
-	ele.addEventListener("transitionend",function(e){
-		var op=ele.ownerDocument.defaultView.getComputedStyle(ele, null)['opacity'];
-		if(op==0){
+	ele.addEventListener("transitionend", function(e) {
+		var op = ele.ownerDocument.defaultView.getComputedStyle(ele, null)['opacity'];
+		if(op == 0) {
 			ele.classList.remove("loading");
 		}
 	});
