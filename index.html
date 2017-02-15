@@ -5,169 +5,165 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title></title>
 		<link rel="stylesheet" href="Css/Initialization.css" />
-		<link rel="stylesheet" type="text/css" href="Css/MainMenu.css" />
-		<link rel="stylesheet" type="text/css" href="Css/PublicStyle.css" />
 		<script type="text/javascript" src="Js/Jquery_2.2.2.js"></script>
-		<script type="text/javascript" src="Js/Vue.js" ></script>
 		<style type="text/css">
 			body {
-				background: url("./images/bg.png") repeat scroll 0 0 transparent;
-				"futura-pt",
-				"Avenir Next",
-				"AvenirNext-SemiBold",
-				"Futura-Medium",
-				Futura,
-				"Futura Std",
-				"Trebuchet MS",
-				Helvetica,
-				Arial,
-				sans-serif;
+				height: 100%;
+				width: 100%;
 			}
 			
-			.ol-div {
-				margin: 0px auto;
-				border: 0px solid red;
-				width: 1024px;
-				margin-top: 15px;
-			}
-			
-			#ol-div-body {
-				height: 530px;
-				border-bottom: 1px solid #9A9A9A;
-			}
-			
-			.body-div-img {
-				width: 201px;
-				margin: 0px auto;
-			}
-			
-			.body-div-img img {
-				width: 200px;
-				height: 200px;
-				border-radius: 50%
-			}
-			
-			.body-div-content,
-			.body-div-content-long {
-				margin: 0 auto;
-				border: 0px solid blue;
-				height: 65px;
-				width: 495px;
-				line-height: 65px;
-				font-size: 1.10em;
-				
-			}
-			
-			.body-div-content-long {
-				text-align: center;
-				width: 624px;
-			}
-			
-			.body-div-content img {
-				width: 45px;
-				height: 45px;
-			}
-			
-			.body-div-content span {
+			#home {
+				background: url(./images/home.jpg) no-repeat center center fixed;
+				display: table;
+				height: 764px;
 				position: relative;
-				top: -15px;
+				width: 100%;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
 			}
 			
-			.content-div-left{
-				width: 200px;
+			#titles {
+				position: absolute;
+				/*border: 1px solid red;*/
+				top: 50%;
+				left: 50%;
+				margin-left: -425px;
+				margin-top: -150px;
+				height: 300px;
+				width: 850px;
+				text-align: center;
+				line-height: 90px;
 			}
 			
-			.content-div-left {
-				text-align: right;
+			h1,
+			h3 {
+				margin: 10px 10px;
 			}
 			
-			#ol-div-foot {
-				height: 560px;
-				border-bottom: 1px solid #9A9A9A;
+			#titles h1 {
+				font-size: 4.5em;
+				font-weight: 700;
+				color: #FFFFFF;
 			}
 			
-			.foot-div {
-				margin: 15px;
-				height: 250px;
-				/*border: 0px solid #22BC62;*/
+			#titles h3 {
+				font-size: 2em;
+				font-weight: 700;
+				color: #FFFFFF;
+			}
+			
+			#links {
+				height: 90px;
+				width: 850px;
+			}
+			
+			.links {
+				height: 88px;
+				width: 190px;
+				border: 0px solid #3D3B49;
 				float: left;
-				width: 300px;
-				align-items: flex-end;
-				display: flex;
-				box-shadow: 0 5px 10px #777;
-				transition: border .5s;
-			}
-			
-			.foot-div-content {
-				width: 300px;
-				height: 0px;
-				/*			border: 1px solid blue;*/
-				background-color: #22BC62;
-				color: rgba(0, 0, 0, 0);
+				margin-left: 10px;
+				font-weight: bold;
+				font-size: 2.0em;
 				transition: all .5s;
+				position: relative;
+				overflow: hidden;
 			}
 			
-			.foot-div:hover .foot-div-content {
-				height: 40px;
-				color: white;
+			.links:hover {
+				background-color: #D6B17D;
+				color: #FFFFFF;
+				/*border: 5px solid #96BDA4;*/
+			}
+			
+			svg {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			svg line {
+				stroke-width: 10;
+				stroke: #3D3B49;
+				fill: none;
+				stroke-dasharray: 200;
+				-webkit-transition: -webkit-transform .6s ease-out;
+				transition: transform .6s ease-out;
+			}
+			
+			.links:hover svg line.line-top {
+				stroke: #96BDA4;
+				-webkit-transform: translateX(190px);
+				transform: translateX(190px);
+			}
+			
+			.links:hover svg line.line-bottom {
+				stroke: #96BDA4;
+				-webkit-transform: translateX(-190px);
+				transform: translateX(-190px);
+			}
+			
+			.links:hover svg line.line-left {
+				stroke: #96BDA4;
+				-webkit-transform: translateY(-88px);
+				transform: translatey(-88px);
+			}
+			
+			.links:hover svg line.line-right {
+				stroke: #96BDA4;
+				-webkit-transform: translateY(88px);
+				transform: translatey(88px);
 			}
 		</style>
 	</head>
 
 	<body>
-		<div id="mainmenu">
-			<main-menu></main-menu>
-		</div>
-		<!--<hr />-->
-		<div class="ol-div" id="ol-div-body">
-			<div class="body-div-img"> <img src="./images/20160409104910_8c5rP.jpeg" /></div>
-			<div class="body-div-content">
-				<div class="content-div-left"><img src="./images/name.png"><span>&nbsp;姓&nbsp;名：</span></div>
-				<div class="content-div-right">H大虾</div>
-			</div>
-			<div class="body-div-content">
-				<div class="content-div-left"><img src="./images/age.png"><span>&nbsp;年&nbsp;龄：</span></div>
-				<div class="content-div-right">测试测试测试</div>
-			</div>
-			<div class="body-div-content">
-				<div class="content-div-left"><img src="./images/adr.png"><span>&nbsp;地&nbsp;址：</span></div>
-				<div class="content-div-right">测试测试测试</div>
-			</div>
-			<div class="body-div-content">
-				<div class="content-div-left"><img src="./images/mail.png"><span>Email：</span></div>
-				<div class="content-div-right">测试测试测试</div>
-			</div>
-			<div class="body-div-content-long">测试测试测试,测试测试测试,测试测试测试,测试测试测试
-			</div>
-
-		</div>
-		<div class="ol-div" id="ol-div-foot">
-			<div class="foot-div">
-				<!--<img src="./images/20160409104910-8c5rP.jpeg1" alt="" />-->
-				<div class="foot-div-content">测试测试测试</div>
-
-			</div>
-			<div class="foot-div">
-				<div class="foot-div-content">啦啦啦 这事介绍</div>
-			</div>
-			<div class="foot-div">
-				<div class="foot-div-content">啦啦啦 这事介绍</div>
-			</div>
-			<div class="foot-div">
-				<div class="foot-div-content">啦啦啦 这事介绍</div>
-			</div>
-			<div class="foot-div">
-				<div class="foot-div-content">啦啦啦 这事介绍</div>
-			</div>
-			<div class="foot-div">
-				<div class="foot-div-content">啦啦啦 这事介绍</div>
+		<div id="home">
+			<div id="titles">
+				<h1>Hello Welcome</h1>
+				<h3>H大虾个人主页</h3>
+				<div id="links">
+					<div class="links" hrefs='/MyPage/Job/Job.html'>
+						<svg width="190" height="88">
+							<line class="line-top" x1="0" y1="0" x2="-190" y2="0" />
+							<line class="line-bottom" x1="380" y1="88" x2="190" y2="88" />
+							<line class="line-left" x1="0" y1="88" x2="0" y2="176" />
+							<line class="line-right" x1="190" y1="" x2="190" y2="-88" />
+						</svg>简历</div>
+					<div class="links">
+						<svg width="190" height="88">
+							<line class="line-top" x1="0" y1="0" x2="-190" y2="0" />
+							<line class="line-bottom" x1="380" y1="88" x2="190" y2="88" />
+							<line class="line-left" x1="0" y1="88" x2="0" y2="176" />
+							<line class="line-right" x1="190" y1="" x2="190" y2="-88" />
+						</svg>作品</div>
+					<div class="links">
+						<svg width="190" height="88">
+							<line class="line-top" x1="0" y1="0" x2="-190" y2="0" />
+							<line class="line-bottom" x1="380" y1="88" x2="190" y2="88" />
+							<line class="line-left" x1="0" y1="88" x2="0" y2="176" />
+							<line class="line-right" x1="190" y1="" x2="190" y2="-88" />
+						</svg>博客</div>
+					<div class="links">
+						<svg width="190" height="88">
+							<line class="line-top" x1="0" y1="0" x2="-190" y2="0" />
+							<line class="line-bottom" x1="380" y1="88" x2="190" y2="88" />
+							<line class="line-left" x1="0" y1="88" x2="0" y2="176" />
+							<line class="line-right" x1="190" y1="" x2="190" y2="-88" />
+						</svg>Git</div>
+				</div>
 			</div>
 		</div>
 	</body>
-<script type="text/javascript" src="Js/PageInit.js" ></script>
-<script>
-$(function(){
-	PageInit.MainMenu();
-})
-</script>
+
+	<script>
+		$(function() {
+			$(".links").on("click", function() {
+				window.location = $(this).attr("hrefs");
+			})
+		})
+	</script>
+
 </html>
