@@ -12,10 +12,9 @@
 		<script type="text/javascript" src="../Js/Vue.js"></script>
 
 		<style>
-		body{
-		}
+			body {}
+			
 			.out-div {
-				
 				border: 1px solid red;
 				height: auto;
 				margin: 0 auto;
@@ -30,7 +29,6 @@
 				border: 1px solid blue;
 				left: 20px;
 			}
-			
 			/*主要区域的每个大div*/
 			
 			.in-item {
@@ -48,10 +46,13 @@
 			
 			.in-item-work-content {
 				height: auto;
-				width: 860px;
-				margin: 15px 82px;
+				width: 975px;
+				margin: 15px 25px;
 				border: 1px solid #ED4E6E;
 				float: left;
+			}
+				.in-item-work-content .content-div-right{
+				width: 175px;;
 			}
 			/*个人简介*/
 			
@@ -75,6 +76,7 @@
 				float: left;
 				margin-left: 15px;
 			}
+		
 			/*工作简介*/
 			
 			#item-work {
@@ -87,11 +89,18 @@
 			}
 			
 			.in-item-project-content {
-				height: 350px;
+				height: auto;
 				border: 1px solid red;
 				margin: 10px 10px;
+				padding: 7px 5px;
 			}
-			
+			.in-item-content-div{
+				height:  45px;
+				/*border: 1px solid #069DD5;*/
+			}
+			.in-item-content-div-info{
+				height:  450px;
+			}
 			.in-item-project-content .content-div-left {
 				clear: left;
 			}
@@ -99,21 +108,18 @@
 			.in-item-project-content .in-item-project-content-introduce {
 				border: 1px solid #0000FF;
 				float: left;
-				height: 45px;
-				margin-top: 25px;
+				height:auto;
+				/*margin-top: 25px;*/
 				margin-left: 10px;
 				width: 920px;
-				white-space: pre-wrap;
-				/* css-3 */
-				white-space: -moz-pre-wrap;
-				/* Mozilla, since 1999 */
-				white-space: -pre-wrap;
-				/* Opera 4-6 */
-				white-space: -o-pre-wrap;
-				/* Opera 7 */
-				word-wrap: break-word;
-				/* Internet Explorer 5.5+ */
-				line-height: 1.25em;
+				line-height: 1.6em;
+				font-size: 14px;
+				text-indent: 2em;
+				padding: 3px 8px;
+				
+				
+				
+				
 			}
 			
 			.in-item-project-toggle {
@@ -172,10 +178,10 @@
 			
 			.block-ul li {
 				height: 25px;
-				width: 45px;
+				width: 13px;
 				float: left;
 				margin-top: 5px;
-				margin-left: 0.95px;
+				margin-left: 1px;
 				opacity: 0;
 				/*border: 1px solid red;*/
 			}
@@ -206,33 +212,30 @@
 			<main-menu></main-menu>
 		</div>
 		<div class="left-menu"></div>
-		<div class="out-div">
+
+		<div class="out-div" id="vue-component-job">
 			<div class="in-item" id="item-pc">
 				<div id="in-item-pc-img"></div>
 				<div id="in-item-pc-content">
 					<div class="content-div-left">姓名：</div>
-					<div class="content-div-right">占位符</div>
+					<div class="content-div-right">{{baseinfo.name}}</div>
 					<div class="content-div-left">年龄：</div>
-					<div class="content-div-right">占位符</div>
+					<div class="content-div-right">{{baseinfo.age}}</div>
 					<div class="content-div-left">性别：</div>
-					<div class="content-div-right">占位符</div>
-					<div class="content-div-left">地址：</div>
-					<div class="content-div-right">占位符</div>
+					<div class="content-div-right">{{baseinfo.gender}}</div>
+					<div class="content-div-left">状态：</div>
+					<div class="content-div-right">{{baseinfo.state}}</div>
 				</div>
 
 			</div>
 			<div class="in-item" id="item-work">
 				<div class="in-item-title">工作概况</div>
 				<div class="in-item-work-content">
-					<div class="content-div-left">姓名：</div>
+					<div class="content-div-left">电话：</div>
+					<div class="content-div-right">内容</div>
+					<div class="content-div-left">邮箱：</div>
 					<div class="content-div-right">占位符</div>
-					<div class="content-div-left">年龄：</div>
-					<div class="content-div-right">占位符</div>
-					<div class="content-div-left">性别：</div>
-					<div class="content-div-right">占位符</div>
-					<div class="content-div-left">地址：</div>
-					<div class="content-div-right">占位符</div>
-					<div class="content-div-left">性别：</div>
+					<div class="content-div-left">QQ：</div>
 					<div class="content-div-right">占位符</div>
 					<div class="content-div-left">地址：</div>
 					<div class="content-div-right">占位符</div>
@@ -241,9 +244,9 @@
 			</div>
 			<div class="in-item" id="item-project">
 				<div class="in-item-title">项目介绍</div>
-				<div id="vue-component-project">
-					<vue-component-project v-for="(item,index) in items" v-bind:options="item"></vue-component-project>
-				</div>
+				<!--<div id="vue-component-project">-->
+				<vue-component-project v-for="(item,index) in project" v-bind:datas="item"></vue-component-project>
+				<!--</div>-->
 
 			</div>
 			<div class="in-item" id="item-skill">
@@ -251,31 +254,10 @@
 				<div class="item-skill-head">
 					<div class="in-item-skill-name">技能类型</div>
 					<div class="in-item-skill-duration">使用时长</div>
-					<div class="in-item-skill-progress">熟练程度 1~5 了解 6~10 熟练 11-16 精通</div>
+					<div class="in-item-skill-progress">每一格代表1个月的熟练度</div>
 				</div>
-				<div class="item-skill-content" id="vue-component-preblock">
-					<div class="item-skill-content-block">
-						<div class="in-item-skill-body">C#</div>
-						<div class="in-item-skill-body">2年10个月</div>
-						<div class="in-item-skill-body in-item-skill-body-block">
-							<ul class="block-ul">
-								<li class="" is="vue-component-preblock" v-for="(item,index) in lgarr['c#']" data-type="c#"></li>
-							</ul>
-							<input type="button" value="加载" class="block-button" v-on:click="initblock($event,16,'c#')" />
-						</div>
-					</div>
-					<hr />
-					<div class="item-skill-content-block">
-						<div class="in-item-skill-body">.Net</div>
-						<div class="in-item-skill-body">2年10个月</div>
-						<div class="in-item-skill-body in-item-skill-body-block">
-							<ul class="block-ul">
-								<li class="" is="vue-component-preblock" v-for="(item,index) in lgarr['net']" data-type="net"></li>
-							</ul>
-							<input type="button" value="加载" class="block-button" v-on:click="initblock($event,8,'net')" />
-						</div>
-					</div>
-					<hr />
+				<div class="item-skill-content" id="item-skill-content">
+					<vue-component-skill v-bind:datas="item" v-for="(item,index) in skill"></vue-component-skill>
 				</div>
 			</div>
 			<div class="in-item" id="item-other">
@@ -300,6 +282,7 @@
 		<script>
 			PageInit.MainMenu();
 			PageInit.BackTop();
+			JobData.InitProData();
 		</script>
 	</body>
 

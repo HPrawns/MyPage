@@ -1,20 +1,50 @@
-[
 {
-	"name": "1",
-	"cycle": "111",
-	"duty": "111111",
-	"content": "111111"
-},
-{
-	"name": "2",
-	"cycle": "222",
-	"duty": "22222",
-	"content": "2222222"
-},
-{
-	"name": "3",
-	"cycle": "333",
-	"duty": "2233333222",
-	"content": "33333"
+	"base": {
+		"name": "大虾",
+		"age": "27",
+		"gender": "男",
+		"state": "工作中"
+	},
+	"project": [
+		{
+			"name": "项目一",
+			"cycle": "111",
+			"duty": "111111",
+			"content": "这里<br/>asdas ",
+			"code": "xda01"
+		}, {
+			"name": "项目二",
+			"cycle": "222",
+			"duty": "22222",
+			"content": "2222222",
+			"code": "xda02"
+		}, {
+			"name": "项目三",
+			"cycle": "333",
+			"duty": "2233333222",
+			"content": "33333",
+			"code": "xda03"
+		}
+	],
+	"skill": [
+		{
+			"type": "C#",
+			"pro": "36"
+		}, {
+			"type": ".NET",
+			"pro": "30"
+		}, {
+			"type": "Html",
+			"pro": "20"
+		},
+		{
+			"type": "JavaScript",
+			"pro": "24"
+		},{
+			"type": "Css",
+			"pro": "20"
+		}
+	],
+	"other": {}
 }
-]
+

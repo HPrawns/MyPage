@@ -25,22 +25,30 @@ var BlogList = {
 		Vue.component('blog-item', {
 			template: '<div class="blog-item">' +
 				'<div class="blog-item-t">' +
-				'<div class="blog-item-title">{{blogs.title}}</div>' +
+				'<div class="blog-item-title">{{blogs.title}}</div><div class="blog-item-author">{{blogs.date}}</div>' +
 				'<div class="blog-item-tag">{{blogs.tag}}</div>' +
 				'</div>' +
 				'<hr>' +
 				'<div class="blog-item-content">{{ContentHandle}}</div>' +
-				'<div class="blog-item-foot">{{blogs.date}}</div>' +
+				'<div class="blog-item-read" v-on:click="GoRead($event,blogs.ourl)">阅读原文</div>' +
 				'</div>',
 			props: ['blogs'],
 			computed:{
 				ContentHandle:function(){	//字太多用..号代替
-					if(this.blogs.content.length>=269){
-					return this.blogs.content.substring(0,260)+".................";}
+					if(this.blogs.content.length>=269){	
+					return this.blogs.content.substring(0,260)+".................";
+					}
 					return this.blogs.content;
 				}
 				
+			},
+			methods:{
+				GoRead:function(event,url){
+					window.open("BlogDetail/"+url);
+//					console.log(url);
+				}
 			}
+			
 		});
 		var _this = this;
 		_this.CreatePage();		//初始化分页组件
