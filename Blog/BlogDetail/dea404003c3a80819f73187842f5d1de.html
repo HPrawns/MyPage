@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>默认页</title>
+		<title>这个是文章的标题拉10</title>
 		<link rel="stylesheet" href="../../Css/Initialization.css" />
 		<link rel="stylesheet" href="../../Css/MainMenu.css" />
 		<script type="text/javascript" src="../../Js/Jquery_2.2.2.js"></script>
@@ -114,6 +114,7 @@
 				height: 30px;
 				line-height: 30px;
 				padding: 2px 5px;
+				margin: 10px 0px;
 			}
 		</style>
 	</head>
@@ -133,7 +134,25 @@
 				<p>有读者问：“你们国家有多少公务员？”我们曾在今年年初的一篇博文中简单涉及过这一问题，今天就再详细谈谈。美国的公务员管理分为不同的三个部分：联邦公务员、州公务员以及地方公务员，地方公务员主要指县、市公务员。联邦、州、地方公务员的人员组成结构是不一样的，比如州及地方公务员包括大量公立学校的教师，而联邦公务员则包括邮局员工等。这三部分公务员各有自己的选拔、考核、工资福利、退休等管理体制，互不相干。</p>
 				<p>地方公务员1380.4万人，其中包括学校雇员814万人、警察部门86万人、医院雇员63万人、消防部门42万人、地方公园雇员36万人、高速公路管理28万人、法院部门25万人、图书馆雇员18万人。</p>
 				<P>从公务员的人员组成结构可以了解美国各级政府运作的大致分工，比如地方政府雇员中，公立中小学雇员人数最多，超过一半，说明中小学教育主要由地方政府负责；而州政府雇员中，公立大学的雇员人数最多，说明公立大学主要由州政府负责；再从司法、执法部门看，警察人数最多的是地方政府，说明地方政府在维护治安方面承担主要责任，而司法部门的雇员人数最多的是地方政府、其次是州政府、联邦政府人数最少，说明司法案件的审理，主要由地方政府及州政府负责；此外，消防部门及图书馆雇员主要集中在地方政府，说明消防与图书馆也主要由地方政府负责。</P>
-				<div class="detail-content-code">&lt;/script&gt;sad</div>
+				<pre class="detail-content-code">//文本框焦点获得时,出现阴影效果
+input[type=text], textarea 
+	 		{
+			-webkit-transition: all 0.30s ease-in-out;
+			-moz-transition: all 0.30s ease-in-out; 
+			-ms-transition: all 0.30s ease-in-out;
+			-o-transition: all 0.30s ease-in-out;
+			outline: none ; 
+			padding: 3px 0px 3px 3px ; margin: 5px 1px 3px 0px ; 
+			border: 1px solid #ddd; 
+			} 
+input[type=text]:focus, textarea:focus 
+			{ 
+			box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+			padding: 3px 0px 3px 3px ;
+			margin: 5px 1px 3px 0px ;
+			border: 1px solid rgba(81, 203, 238, 1); 
+			}
+				</pre>
 				<P>从公务员的人员组成结构可以了解美国各级政府运作的大致分工，比如地方政府雇员中，公立中小学雇员人数最多，超过一半，说明中小学教育主要由地方政府负责；而州政府雇员中，公立大学的雇员人数最多，说明公立大学主要由州政府负责；再从司法、执法部门看，警察人数最多的是地方政府，说明地方政府在维护治安方面承担主要责任，而司法部门的雇员人数最多的是地方政府、其次是州政府、联邦政府人数最少，说明司法案件的审理，主要由地方政府及州政府负责；此外，消防部门及图书馆雇员主要集中在地方政府，说明消防与图书馆也主要由地方政府负责。</P>
 				<div class="detail-content-code">&lt;/script&gt;sad</div>
 				<p>地方公务员1380.4万人，其中包括学校雇员814万人、警察部门86万人、医院雇员63万人、消防部门42万人、地方公园雇员36万人、高速公路管理28万人、法院部门25万人、图书馆雇员18万人。</p>
@@ -151,6 +170,7 @@
 	</body>
 
 	<script type="text/javascript" src="../../Js/PageInit.js"></script>
+	<script type="text/javascript" src="../../Js/BlogDetail.js"></script>
 	<script>
 		PageInit.MainMenu();
 	</script>

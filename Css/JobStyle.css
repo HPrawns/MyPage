@@ -1,0 +1,212 @@
+			.out-div {
+				border: 0px solid red;
+				height: auto;
+				margin: 0 auto;
+				width: 1024px;
+				background-color: #FFFFFF;
+			}
+			
+			.left-menu {
+				position: fixed;
+				height: 300px;
+				width: 120px;
+				border: 1px solid blue;
+				left: 16%;
+			}
+			/*主要区域的每个大div*/
+			
+			.in-item {
+				width: 1024px;
+				border: 1px solid #0086BF;
+				margin-top: 15px;
+			}
+			
+			.in-item-title {
+				line-height: 35px;
+				height: 35px;
+				border-bottom: 1px solid #9A9A9A;
+				font-size: 1.25em;
+				text-indent: 1em;
+			}
+			
+			.in-item-work-content {
+				height: auto;
+				width: 975px;
+				margin: 15px 25px;
+				border: 0px solid #ED4E6E;
+				padding: 10px 5px;
+			}
+			/*个人简介*/
+			
+			#item-pc {
+				height: 275px;
+				padding-top: 45px;
+			}
+			
+			#in-item-pc-img {
+				border: 1px solid #22BC62;
+				height: 255px;
+				width: 255px;
+				float: left;
+				margin-left: 245px;
+			}
+			
+			#in-item-pc-content {
+				height: 255px;
+				width: 275px;
+				border: 1px solid #22BC62;
+				float: left;
+				margin-left: 15px;
+			}
+			/*工作简介*/
+			
+			#item-work {
+				height: auto;
+			}
+			
+			.item-work-content-table {
+				width: 975px;
+				text-align: left;
+			}
+			
+			.item-work-content-table td:nth-child(2n-1) {
+				width: 80px;
+				padding: 15px 5px;
+			}
+			
+			.item-work-content-table td:nth-child(2n) {
+				border-bottom: 1px solid #009AD9;
+			}
+			/*项目简介*/
+			
+			#item-project {
+				height: auto;
+			}
+			
+			.in-item-project-content {
+				height: auto;
+				border-bottom: 1px solid red;
+				margin: 10px 10px;
+				padding: 7px 5px;
+			}
+			
+			.in-item-content-div {
+				height: 45px;
+				/*border: 1px solid #069DD5;*/
+			}
+			
+			.in-item-content-div-info {
+				height: auto;
+			}
+			
+			.in-item-project-content .content-div-left {
+				clear: left;
+			}
+			
+			.in-item-project-content .content-div-right {
+				width: auto;
+			}
+			
+			.in-item-project-content .in-item-project-content-introduce {
+				/*border: 1px solid #0000FF;*/
+				/*float: left;*/
+				height: auto;
+				/*margin-top: 25px;*/
+				margin-left: 10px;
+				width: 920px;
+				line-height: 2.1em;
+				font-size: 14px;
+				/*text-indent: 2em;*/
+				padding: 3px 8px;
+			}
+			
+			.in-item-project-content-info {
+				height: 45px;
+				width: 900px;
+				line-height: 45px;
+				margin: 5px 10px;
+			}
+			
+			.in-item-project-toggle {
+				width: 25px;
+				height: 25px;
+				border: 0px solid red;
+				position: relative;
+				float: right;
+			}
+			/*技能简介*/
+			
+			#item-skill {
+				height: auto;
+			}
+			
+			.item-skill-content,
+			.item-skill-head {
+				margin: 0px 10px;
+				width: 1004px;
+				height: auto;
+			}
+			
+			.item-skill-head {
+				border: 0px solid red;
+				height: 35px;
+				padding: 5px 5px;
+			}
+			
+			.item-skill-content {
+				/*border: 1px solid red;*/
+			}
+			
+			.item-skill-content-block {
+				height: 30px;
+			}
+			
+			.in-item-skill-duration,
+			.in-item-skill-name,
+			.in-item-skill-progress,
+			.in-item-skill-body {
+				float: left;
+				width: 80px;
+				height: 35px;
+				line-height: 35px;
+				margin-left: 30px;
+			}
+			
+			.in-item-skill-duration,
+			.in-item-skill-name {
+				border-right: 1px solid #009AD9;
+			}
+			
+			.in-item-skill-progress,
+			.in-item-skill-body-block {
+				width: 746px;
+			}
+			
+			.block-ul li {
+				height: 25px;
+				width: 13px;
+				float: left;
+				margin-top: 5px;
+				margin-left: 1px;
+				opacity: 0;
+				/*border: 1px solid red;*/
+			}
+			
+			.block-button {
+				height: 25px;
+				line-height: 25px;
+				width: 70px;
+				background-color: #2FBDAB;
+				color: #FFFFFF;
+				border: 0 solid red;
+				transition: background-color .5s;
+			}
+			
+			.block-button:hover {
+				background-color: #D84C29;
+			}
+			/*其他简介*/
+			
+			#item-other {
+				height: 150px;
+			}

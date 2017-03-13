@@ -19,6 +19,7 @@ var JobData = {
 			async: false,
 			success: function(BackData) {
 				_baseList = BackData;
+//				console.log(_baseList);
 			}
 		});
 		/*加载项目经验数据*/
@@ -44,7 +45,7 @@ var JobData = {
 				'<div class="in-item-content-div"><div class="content-div-left">名称：</div><div class="content-div-right">{{ datas.name }}</div></div>' +
 				'<div class="in-item-content-div"><div class="content-div-left">周期：</div><div class="content-div-right">{{ datas.cycle }}</div></div>' +
 				'<div class="in-item-content-div"><div class="content-div-left">职责：</div><div class="content-div-right">{{ datas.duty }}</div></div>' +
-				'<div class="in-item-content-div-info"><div class="content-div-left">简介：</div><div class="in-item-project-content-introduce"   v-html="datas.content"> </div></div>' +
+				'<div class="in-item-project-content-info" >项目描述：</div><div class="in-item-content-div-info"><div class="in-item-project-content-introduce"   v-html="datas.content"> </div></div>' +
 				'</div>',
 			props: ['datas']
 		});

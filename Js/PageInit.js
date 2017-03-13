@@ -13,7 +13,7 @@ var PageInit = {
 					works: "/MyPage/Work/Works.html",
 					blog: "/MyPage/Blog/BlogList.html",
 					job: "/MyPage/Job/Job.html",
-					git: "",
+					git: "https://github.com/HPrawns",
 					defaults:"/MyPage/default.html"
 				}
 			}

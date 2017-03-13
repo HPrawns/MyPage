@@ -6,116 +6,9 @@
 		<title></title>
 		<link rel="stylesheet" href="Css/Initialization.css" />
 		<script type="text/javascript" src="Js/Jquery_2.2.2.js"></script>
+		<link rel="stylesheet" href="Css/indexSytle.css" />
 		<style type="text/css">
-			body {
-				height: 100%;
-				width: 100%;
-			}
-			
-			#home {
-				background: url(./images/home.jpg) no-repeat center center fixed;
-				display: table;
-				height: 764px;
-				position: relative;
-				width: 100%;
-				-webkit-background-size: cover;
-				-moz-background-size: cover;
-				-o-background-size: cover;
-				background-size: cover;
-			}
-			
-			#titles {
-				position: absolute;
-				/*border: 1px solid red;*/
-				top: 50%;
-				left: 50%;
-				margin-left: -425px;
-				margin-top: -150px;
-				height: 300px;
-				width: 850px;
-				text-align: center;
-				line-height: 90px;
-			}
-			
-			h1,
-			h3 {
-				margin: 10px 10px;
-			}
-			
-			#titles h1 {
-				font-size: 4.5em;
-				font-weight: 700;
-				color: #FFFFFF;
-			}
-			
-			#titles h3 {
-				font-size: 2em;
-				font-weight: 700;
-				color: #FFFFFF;
-			}
-			
-			#links {
-				height: 90px;
-				width: 850px;
-			}
-			
-			.links {
-				height: 88px;
-				width: 190px;
-				border: 0px solid #3D3B49;
-				float: left;
-				margin-left: 10px;
-				font-weight: bold;
-				font-size: 2.0em;
-				transition: all .5s;
-				position: relative;
-				overflow: hidden;
-			}
-			
-			.links:hover {
-				background-color: #D6B17D;
-				color: #FFFFFF;
-				/*border: 5px solid #96BDA4;*/
-			}
-			
-			svg {
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
-			
-			svg line {
-				stroke-width: 10;
-				stroke: #3D3B49;
-				fill: none;
-				stroke-dasharray: 200;
-				-webkit-transition: -webkit-transform .6s ease-out;
-				transition: transform .6s ease-out;
-			}
-			
-			.links:hover svg line.line-top {
-				stroke: #96BDA4;
-				-webkit-transform: translateX(190px);
-				transform: translateX(190px);
-			}
-			
-			.links:hover svg line.line-bottom {
-				stroke: #96BDA4;
-				-webkit-transform: translateX(-190px);
-				transform: translateX(-190px);
-			}
-			
-			.links:hover svg line.line-left {
-				stroke: #96BDA4;
-				-webkit-transform: translateY(-88px);
-				transform: translatey(-88px);
-			}
-			
-			.links:hover svg line.line-right {
-				stroke: #96BDA4;
-				-webkit-transform: translateY(88px);
-				transform: translatey(88px);
-			}
+	
 		</style>
 	</head>
 
@@ -162,7 +55,8 @@
 		$(function() {
 			$(".links").on("click", function() {
 				window.location = $(this).attr("hrefs");
-			})
+			});
+			$("#home").height($(window).height());
 		})
 	</script>
 
