@@ -4,7 +4,7 @@ var BlogList = {
 		data.datalist = [];
 		data.datalistcount = 0;
 		data.pagecount = 0;
-		data.pagesize = pagesize == undefined ? 5 : pagesize;
+		data.pagesize = pagesize == undefined ? 2: pagesize;
 		$.ajax({
 			type: "GET",
 			url: "../JsonData/BlogList.json",
